@@ -3,31 +3,35 @@ let chosenImage = document.getElementById("chosen-image");
 let fileName = document.getElementById("file-name");
 let container = document.querySelector(".container");
 let error = document.getElementById("error");
-let imageDisplay = document.getElementById("image-display");
+let dataDisplay = document.getElementById("data-display");
 
 const fileHandler = (file, name, type) => {
-  if (type.split("/")[0] !== "image") {
+  if (type !== "text/csv") {
     //File Type Error
-    error.innerText = "Please upload an image file";
+    error.innerText = "Please upload an csv file";
     return false;
   }
   error.innerText = "";
   let reader = new FileReader();
-  reader.readAsDataURL(file);
-  reader.onloadend = () => {
-    //image and file name
-    let imageContainer = document.createElement("figure");
-    let img = document.createElement("img");
-    img.src = reader.result;
-    imageContainer.appendChild(img);
-    imageContainer.innerHTML += `<figcaption>${name}</figcaption>`;
-    imageDisplay.appendChild(imageContainer);
+  reader.readAsText(file);
+  reader.onloadend = (event) => {
+    const lines = event.target.result.split('\n');
+    dataDisplay.innerHTML = ""; // 内容をクリア
+
+    for (let line of lines) {
+        const [field1, field2] = line.split(',');
+        if (field1 && field2) { // 空行を無視
+            const formatted = document.createElement('div');
+            formatted.textContent = `${field1}=${field2}`;
+            dataDisplay.appendChild(formatted);
+        }
+    }
   };
 };
 
 //Upload Button
 uploadButton.addEventListener("change", () => {
-  imageDisplay.innerHTML = "";
+  dataDisplay.innerHTML = "";
   Array.from(uploadButton.files).forEach((file) => {
     fileHandler(file, file.name, file.type);
   });
@@ -71,7 +75,7 @@ container.addEventListener(
     container.classList.remove("active");
     let draggedData = e.dataTransfer;
     let files = draggedData.files;
-    imageDisplay.innerHTML = "";
+    dataDisplay.innerHTML = "";
     Array.from(files).forEach((file) => {
       fileHandler(file, file.name, file.type);
     });
