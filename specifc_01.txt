@@ -1,0 +1,51 @@
+Of course, here's the text extracted from the image:
+
+**(a)**
+- **PROLIFERATION**
+  - Ki-67
+  - STK15
+  - Survivin
+  - Cyclin B1
+  - MYBL2
+- **HER2**
+  - GRB7
+  - HER2
+  - GSTM1
+- **ESTROGEN**
+  - ER
+  - PGR
+  - Bcl2
+  - SCUBE2
+- **INVASION**
+  - Stromelysin 3
+  - Cathepsin L2
+- **CD68**
+  - BAG1
+- **REFERENCE**
+  - Beta-actin
+  - GAPDH
+  - RPLP0
+  - GUS
+  - TFRC
+
+**(b)**
+- **Score**             | **Formula**
+  ---------------------|-------------------
+- **HER2 Group Score** | (0.9 × GRB7) + (0.1 × HER2)
+                        If HER2 Group Score is less than 8 then the HER2 Group Score is considered equal to 8
+- **ER Group Score**   | [(0.8 × ER] + [1.2 × PgR] + Bcl2 + SCUBE2)/4
+- **Proliferation Group Score** | (SURV + Ki-67 + MYBL2 + Cyclin B1 + STK15)/5
+                        If the Proliferation Group Score is under 6.5 then the Proliferation Group Score is considered equal to 6.5
+- **Invasion Group Score** | (Cathepsin L2 + Stromelysin 3)/2
+
+**(c)**
+- **RSu** =
+  + 0.47 × HER2 Group Thresholded Score
+  - 0.34 × ER Group Score
+  + 1.04 × Proliferation Group Thresholded Score
+  + 0.10 × Invasion Group Score
+  + 0.05 × CD68
+  - 0.08 × GSTM1
+  - 0.07 × BAG1
+
+Let me know if you need any further clarification!
