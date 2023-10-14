@@ -17,13 +17,12 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="mainview">
+    <div class="upload-area">
       <input type="file" id="upload-button" multiple accept="text/csv" />
       <label class="upload-btn" for="upload-button"
         ><i class="fa-solid fa-upload"></i>&nbsp; Choose Or Drop data files
       </label>
       <div id="error"></div>
-      <div id="data-display"></div>
     </div>
 
     <div class="container">
@@ -33,12 +32,12 @@
                   PROLIFERATION
               </div>
               <ul>
-                  <li><label>Ki-67</label><div id="val-Ki-67" class="val-box">0</div></li>
-                  <li><label>STK15</label><div id="val-STK15" class="val-box">0</div></li>
-                  <li><label>Survivin</label><div id="val-Survivin" class="val-box">0</div></li>
-                  <li><label>Cyclin B1</label><div id="val-Cyclin-B1" class="val-box">0</div></li>
-                  <li><label>MYBL2</label><div id="val-MYBL2" class="val-box">0</div></li>
-                  <li><label>GroupScore(min 8)</label><div id="valg-PROLIFERATION" class="val-box2">0</div></li>
+                  <li><div class="value-area"><label>Ki-67</label><div id="val-Ki-67" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>STK15</label><div id="val-STK15" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>Survivin</label><div id="val-Survivin" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>Cyclin B1</label><div id="val-Cyclin-B1" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>MYBL2</label><div id="val-MYBL2" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>GroupScore(min 8)</label><div id="valg-PROLIFERATION" class="val-box2">0</div></div></li>
               </ul>
           </div>
           <div class="box2">
@@ -46,11 +45,11 @@
                   ESTROGEN
               </div>
               <ul>
-                  <li><label>ER</label><div id="val-ER" class="val-box">0</div></li>
-                  <li><label>PGR</label><div id="val-PGR" class="val-box">0</div></li>
-                  <li><label>Bcl2</label><div id="val-Bcl2" class="val-box">0</div></li>
-                  <li><label>SCUBE2</label><div id="val-SCUBE2" class="val-box">0</div></li>
-                  <li><label>GroupScore</label><div id="valg-ESTROGEN" class="val-box2">0</div></li>
+                  <li><div class="value-area"><label>ER</label><div id="val-ER" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>PGR</label><div id="val-PGR" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>Bcl2</label><div id="val-Bcl2" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>SCUBE2</label><div id="val-SCUBE2" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>GroupScore</label><div id="valg-ESTROGEN" class="val-box2">0</div></div></li>
               </ul>
           </div>
       </div>
@@ -60,9 +59,9 @@
                   HER2
               </div>
               <ul>
-                  <li><label>GRB7</label><div id="val-GRB7" class="val-box">0</div></li>
-                  <li><label>HER2</label><div id="val-HER2" class="val-box">0</div></li>
-                  <li><label>GroupScore</label><div id="valg_HER2" class="val-box2">0</div></li>
+                  <li><div class="value-area"><label>GRB7</label><div id="val-GRB7" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>HER2</label><div id="val-HER2" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>GroupScore</label><div id="valg_HER2" class="val-box2">0</div></div></li>
               </ul>
           </div>
           <div class="box1">
@@ -70,24 +69,24 @@
                   INVASION
               </div>
               <ul>
-                  <li><label>Stromelysin 3</label><div id="val-Stromelysin-3" class="val-box">0</div></li>
-                  <li><label>Cathepsin L2</label><div id="val-Cathepsin-L2" class="val-box">0</div></li>
-                  <li><label>GroupScore</label><div id="valg-INVASION" class="val-box2">0</div></li>
+                  <li><div class="value-area"><label>Stromelysin 3</label><div id="val-Stromelysin-3" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>Cathepsin L2</label><div id="val-Cathepsin-L2" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>GroupScore</label><div id="valg-INVASION" class="val-box2">0</div></div></li>
               </ul>    
           </div>
           <div class="box3">
               <ul>
-                  <li><label>GSTM1</label><div id="val-GSTM1" class="val-box">0</div></li>
+                  <li><div class="value-area"><label>GSTM1</label><div id="val-GSTM1" class="val-box">0</div></div></li>
               </ul>    
           </div>
           <div class="box3">
               <ul>
-                  <li><label>CD68</label><div id="val-CD68" class="val-box">0</div></li>
+                  <li><div class="value-area"><label>CD68</label><div id="val-CD68" class="val-box">0</div></div></li>
               </ul>    
           </div>
           <div class="box3">
               <ul>
-                  <li><label>BAG1</label><div id="val-BAG1" class="val-box">0</div></li>
+                  <li><div class="value-area"><label>BAG1</label><div id="val-BAG1" class="val-box">0</div></div></li>
               </ul>    
           </div>
       </div>
@@ -102,11 +101,11 @@
                   REFERENCE
               </div>
               <ul>
-                  <li><label>Beta-action</label><div id="val-Beta-action" class="val-box">0</div></li>
-                  <li><label>GAPDH</label><div id="val-GAPDH" class="val-box">0</div></li>
-                  <li><label>RPLPO</label><div id="val-RPLPO" class="val-box">0</div></li>
-                  <li><label>GUS</label><div id="val-GUS" class="val-box">0</div></li>
-                  <li><label>TFRC</label><div id="val-TFRC" class="val-box">0</div></li>
+                  <li><div class="value-area"><label>Beta-action</label><div id="val-Beta-actin" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>GAPDH</label><div id="val-GAPDH" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>RPLPO</label><div id="val-RPLPO" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>GUS</label><div id="val-GUS" class="val-box">0</div></div></li>
+                  <li><div class="value-area"><label>TFRC</label><div id="val-TFRC" class="val-box">0</div></div></li>
               </ul>               
           </div>
       </div>
