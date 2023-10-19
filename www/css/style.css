@@ -2,11 +2,12 @@
     font-family: "Poppins", sans-serif;
   }
   .upload-area {
-    background-color: #a4b7e3;
+    background-color: #abadb4;
     min-width: 27.5em;
     padding: 3.12em 1.87em;
     box-shadow: 0 1.25em 3.43em rgba(0, 0, 0, 0.08);
     border-radius: 0.5em;
+    margin: 0.3em;
   }
 
   input[type="file"] {

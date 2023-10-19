@@ -18,9 +18,9 @@
   </head>
   <body>
     <div class="upload-area">
-      <input type="file" id="upload-button" multiple accept="text/csv" />
+      <input type="file" id="upload-button" accept="text/csv" />
       <label class="upload-btn" for="upload-button"
-        ><i class="fa-solid fa-upload"></i>&nbsp; Choose Or Drop data files
+        ><i class="fa-solid fa-upload"></i>&nbsp; Choose Or Drop data HERE!
       </label>
       <div id="error"></div>
     </div>
@@ -61,7 +61,7 @@
               <ul>
                   <li><div class="value-area"><label>GRB7</label><div id="val-GRB7" class="val-box">0</div></div></li>
                   <li><div class="value-area"><label>HER2</label><div id="val-HER2" class="val-box">0</div></div></li>
-                  <li><div class="value-area"><label>GroupScore</label><div id="valg_HER2" class="val-box2">0</div></div></li>
+                  <li><div class="value-area"><label>GroupScore</label><div id="valg-HER2" class="val-box2">0</div></div></li>
               </ul>
           </div>
           <div class="box1">
@@ -94,7 +94,7 @@
           <div style="height: 38%;"></div>
           <div class="box4">
               <div class="rsu">RSU</div>
-              <div class="val-rsu">0</div>
+              <div id="val-RSU" class="val-rsu">0</div>
           </div>
           <div class="box5">
               <div class="group-name">
@@ -111,6 +111,7 @@
       </div>
   </div>
   <!-- Script -->
+  <script src="scripts/js/rsu.js"></script>
   <script src="scripts/js/upload.js"></script>
 </body>
 </html>
